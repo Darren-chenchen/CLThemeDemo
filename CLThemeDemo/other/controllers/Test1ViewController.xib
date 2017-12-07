@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Test1ViewController" customModule="CLThemeDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="pageController" destination="wkk-yJ-eyW" id="E5K-iA-XvJ"/>
+                <outlet property="progressView" destination="zOQ-kZ-XdI" id="7iY-ZA-Ujj"/>
+                <outlet property="segmentControl" destination="mbU-Ev-MmS" id="Ow1-Gi-yz8"/>
+                <outlet property="sliderView" destination="kEz-Kl-neE" id="3Jo-bg-UIR"/>
+                <outlet property="switchView" destination="2Cg-U4-63l" id="tef-h9-G2U"/>
+                <outlet property="textField" destination="pvg-Xq-7EQ" id="i1n-T4-sE4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-Kl-neE">
+                    <rect key="frame" x="14" y="112" width="347" height="31"/>
+                </slider>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cg-U4-63l">
+                    <rect key="frame" x="163" y="185" width="51" height="31"/>
+                </switch>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-kZ-XdI">
+                    <rect key="frame" x="15" y="302" width="345" height="2"/>
+                </progressView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" translatesAutoresizingMaskIntoConstraints="NO" id="wkk-yJ-eyW">
+                    <rect key="frame" x="15" y="348" width="345" height="37"/>
+                </pageControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mbU-Ev-MmS">
+                    <rect key="frame" x="15" y="435" width="345" height="29"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                        <segment title=""/>
+                        <segment title=""/>
+                        <segment title=""/>
+                    </segments>
+                </segmentedControl>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UITextField" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvg-Xq-7EQ">
+                    <rect key="frame" x="15" y="531" width="345" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="50j-2s-zw3"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mbU-Ev-MmS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="2D5-c4-sXl"/>
+                <constraint firstItem="mbU-Ev-MmS" firstAttribute="top" secondItem="wkk-yJ-eyW" secondAttribute="bottom" constant="50" id="34b-6d-WEA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kEz-Kl-neE" secondAttribute="trailing" constant="16" id="6Qi-b2-8WT"/>
+                <constraint firstItem="kEz-Kl-neE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BF4-KT-37n"/>
+                <constraint firstItem="pvg-Xq-7EQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="BsY-xA-gdQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mbU-Ev-MmS" secondAttribute="trailing" constant="15" id="L9c-ju-2Su"/>
+                <constraint firstItem="2Cg-U4-63l" firstAttribute="centerX" secondItem="kEz-Kl-neE" secondAttribute="centerX" id="NGC-OH-P4W"/>
+                <constraint firstItem="pvg-Xq-7EQ" firstAttribute="top" secondItem="mbU-Ev-MmS" secondAttribute="bottom" constant="68" id="Pxt-DQ-VOo"/>
+                <constraint firstAttribute="trailing" secondItem="zOQ-kZ-XdI" secondAttribute="trailing" constant="15" id="S1E-0B-mS2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wkk-yJ-eyW" secondAttribute="trailing" constant="15" id="TSe-9F-yVv"/>
+                <constraint firstItem="2Cg-U4-63l" firstAttribute="top" secondItem="kEz-Kl-neE" secondAttribute="bottom" constant="43" id="WMo-pl-aw6"/>
+                <constraint firstItem="wkk-yJ-eyW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="XlT-K3-nvT"/>
+                <constraint firstItem="zOQ-kZ-XdI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="aUw-3U-Mk0"/>
+                <constraint firstItem="zOQ-kZ-XdI" firstAttribute="top" secondItem="2Cg-U4-63l" secondAttribute="bottom" constant="86" id="aVO-r7-45f"/>
+                <constraint firstItem="kEz-Kl-neE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="92" id="hOn-HC-xNq"/>
+                <constraint firstItem="wkk-yJ-eyW" firstAttribute="top" secondItem="zOQ-kZ-XdI" secondAttribute="bottom" constant="44" id="jPS-N2-6DF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pvg-Xq-7EQ" secondAttribute="trailing" constant="15" id="p2x-tN-L2z"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

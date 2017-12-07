@@ -1,0 +1,6 @@
+framework module Pods_CLThemeDemo {
+  umbrella header "Pods-CLThemeDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
