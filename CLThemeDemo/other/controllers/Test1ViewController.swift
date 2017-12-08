@@ -34,4 +34,7 @@ class Test1ViewController: BaseViewController {
         ThemeStyleTools.cl_setupTextFieldTextColor(textField: self.textField)
 
     }
+    deinit {
+        print("释放了")
+    }
 }

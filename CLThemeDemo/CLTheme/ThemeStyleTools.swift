@@ -156,6 +156,26 @@ extension ThemeStyleTools {
         }).addDisposableTo(disposeBag)
     }
 }
+//MARK: - UITextView
+extension ThemeStyleTools {
+    //UITextView文字颜色
+    public static func cl_setupTextViewColor(textView: UITextView) {
+        ListeningThemeAdjuster.listeningTheme.asObservable().subscribe(onNext: { (themeDict:[String:Any]) in
+            
+            Project_Theme = themeDict
+            
+            guard let colorStr = Project_Theme["mainColor"] as? String else {
+                return
+            }
+            let color = UIColor(hexString: colorStr)
+
+            textView.textColor = color
+            
+        }).addDisposableTo(disposeBag)
+
+    }
+}
+
 //MARK: - UISlider
 extension ThemeStyleTools {
     //UISlider颜色

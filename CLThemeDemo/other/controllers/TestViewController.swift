@@ -80,6 +80,9 @@ class TestViewController: BaseViewController {
         
         loadData()
     }
+    deinit {
+        print("释放了")
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -162,6 +165,8 @@ extension TestViewController : UICollectionViewDataSource,UICollectionViewDelega
         
         ListeningThemeAdjuster.cl_updateTheme(themeDict: themeDictNew)
     }
+    
+    
 }
 
 

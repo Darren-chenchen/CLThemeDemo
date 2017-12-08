@@ -13,23 +13,15 @@ class Test3ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navTitle = "测试控制器释放问题"
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func clickBtn1(_ sender: Any) {
+        let testVC = TestViewController.init(nibName: "TestViewController", bundle: nil)
+        self.navigationController?.pushViewController(testVC, animated: true)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func clickBtn2(_ sender: Any) {
+        let testVC = Test1ViewController.init(nibName: "Test1ViewController", bundle: nil)
+        self.navigationController?.pushViewController(testVC, animated: true)
     }
-    */
-
 }
